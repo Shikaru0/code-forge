@@ -15,6 +15,39 @@ All sections always apply, but use the correct order based on your task and the 
 - Sections can be brought forth multiple times in an order.
 - Checklist is last, and always mandatory.
 
+## Code Analysis
+Use this when analysing, reviewing or reading code.
+
+### What To Check
+Run through these in order, report findings, do not do unnecessary changes, output in Analysis Output Format:
+
+#### Correctness
+- Does the code do what it claims / is supposed to do?
+- Are there logic errors, off-by-one errors, or unhandled edge cases?
+- Are there race conditions or state issues?
+
+#### Simplicity Violations
+- Dead code (unused variables, functions, imports, branches)
+- Over-abstraction (single-use abstractions, unnecessary indirection)
+- Duplicate logic that should be shared.
+- Speculative code (parameters/branches never used)
+
+#### Structure Issues
+- Functions doing things that it shouldn't do.
+- Deep nesting with bad returns.
+- Missing seperation of concerns.
+- Circular or tangled dependencies.
+
+#### Documentation Gaps
+- Missing really needed documentation.
+- Misleading or outdated comments.
+
+### Analysis Output Format
+Severity: [Critical | Warning | Info]
+Location: file, line, or function name
+Issue: What is wrong
+Suggestion: How to fix (one line) 
+
 ## Before Writing Code
 1. Check if a similar function, class, utility, or abstraction already exists in the codebase.
 2. If it exists and is sufficient, reuse it instead of duplicating it.
