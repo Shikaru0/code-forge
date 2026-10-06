@@ -15,6 +15,30 @@ All sections always apply, but use the correct order based on your task and the 
 - Sections can be brought forth multiple times in an order.
 - Checklist is last, and always mandatory.
 
+## Adding a dependency
+When adding a dependency.
+
+### How To Add
+Add a dependency using the supported command if possible, only change direct file if needed. 
+
+For instance:
+
+`cargo add {dependency}`
+
+`bun add {dependency}`
+
+## Creating a project
+When creating a new project, following the Architecture section.
+
+### Templates
+Use existing minimal templates/cli commands to setup the base project, rather then creating files manually.
+
+For instance:
+
+`cargo new {project_name}`
+
+`bun create astro {project_name}`
+
 ## Code Analysis
 Use this when analysing, reviewing or reading code.
 
@@ -53,6 +77,26 @@ Suggestion: How to fix (one line)
 2. If it exists and is sufficient, reuse it instead of duplicating it.
 3. If it exists but is insufficient, consider enhancing it rather than creating a parallel version.
 4. Use the findings from this check to inform the implementation.
+
+## Architecture
+When deciding file structure, module organization or project layout.
+
+### Principles
+- Start with the base simplest structure that works.
+- Split files when they become hard to navigate.
+- Group by feature/domain, and in the correct situation use technical types.
+- Nest if needed, but avoid deep nesting.
+
+### When To Create A New File/Module
+- The logic has a distinct responsibility unrelated to existing files.
+- The file would otherwise mix multiple concerns.
+- The module will be reused from multiple places.
+- Do NOT create a file for future.
+
+### When NOT To Abstract
+- Only one implementation exists and no second is planned.
+- The abstraction saves fewer lines than it adds in indirection.
+- The abstraction exists to 'make things cleaner' without concrete benefit.
 
 ## Coding Pipeline
 Before writing code, run through these in order:
