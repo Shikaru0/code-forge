@@ -20,4 +20,10 @@ Before writing any code, run through this in order and stop:
 3. None of the above -> use the following principles
 
 ## Code Generation
-Write minimal code
+Write minimal code using the following examples/templates/rules in order
+
+### Minimal
+Only what the requirement demands, nothing speculative, but keep modularity and robustness in mind
+Prefer composition over inheritance
+Do not over-engineer code
+Do not create 'custom' error/safety handling if not requested
