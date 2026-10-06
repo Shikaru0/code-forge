@@ -21,8 +21,6 @@ All sections always apply, but use the correct order based on your task and the 
 3. If it exists but is insufficient, consider enhancing it rather than creating a parallel version.
 4. Use the findings from this check to inform the implementation.
 
-**Always continue to Code Generation after this check.**
-
 ## Coding Pipeline
 Before writing code, run through these in order:
 
