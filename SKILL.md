@@ -27,3 +27,8 @@ Only what the requirement demands, nothing speculative, but keep modularity and 
 Prefer composition over inheritance
 Do not over-engineer code
 Do not create 'custom' error/safety handling if not requested
+
+### Modular
+Keep the code modular without over-engineering it
+Write small, focused, reusable functions and split files when justified
+Use abstractions if needed, but do not create them if there isn't a concrete purpose
