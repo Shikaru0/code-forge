@@ -1,10 +1,14 @@
 ---
 name: code-forge
-description: Coding enhancement skill to produce minimal, documented, robust, modular code 
+description: "Mandatory coding skill. Invoke BEFORE: writing code, refactoring code, creating a new project, adding a dependency, reading or analyzing code. Produces minimal, documented, robust, modular code. Always active for any coding task."
 ---
 
 # code-forge
 Apply these rules and principles when generating or refactoring code.
+
+## Activation
+This skill is always active. Load these rules before any coding task.
+If you are about to write, refactor, analyze, or review code, apply these rules first.
 
 ## Overall Pipeline
 All sections always apply, but use the correct order based on your task and the Overall Pipeline Rules. 
