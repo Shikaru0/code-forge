@@ -6,6 +6,15 @@ description: Coding enhancement skill to produce minimal, documented, robust, mo
 # code-forge
 Apply these rules and principles when generating or refactoring code.
 
+## Overall Pipeline
+All sections always apply, but use the correct order based on your task and the Overall Pipeline Rules. 
+
+### Overall Pipeline Rules
+- Every section applies unless explicitly irrelevant to the task.
+- Apply sections in whatever order makes sense for the task.
+- Sections can be brought forth multiple times in an order.
+- Checklist is last, and always mandatory.
+
 ## Before Writing Code
 1. Check if a similar function, class, utility, or abstraction already exists in the codebase.
 2. If it exists and is sufficient, reuse it instead of duplicating it.
