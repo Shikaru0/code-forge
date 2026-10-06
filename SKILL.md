@@ -166,4 +166,7 @@ Ask:
 - [ ] No useless bloated comments exist
 - [ ] Documentation is accurate and concise
 
+## Simplicity
+- [ ] It follows the 'Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.' rule.
+
 If any box is unchecked, fix before output.
