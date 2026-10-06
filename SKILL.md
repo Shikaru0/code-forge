@@ -64,3 +64,22 @@ Ask:
 5. Extract duplicated logic into shared functions.
 6. Enhance control flow and fix deep-nesting issues.
 7. Do not refactor code if it is not needed.
+
+## Checklist
+### Reuse
+- [ ] No existing dependency, package, or codebase function covers this
+- [ ] No duplicated logic introduced
+
+## Minimal
+- [ ] Nothing speculative: no unused parameters, branc hes or abstractions
+- [ ] Nothing can be removed without losing required functionality
+
+## Modular
+- [ ] Abstractions have a concrete purpose and use
+- [ ] Original duplicate logic is shared
+
+## Documented
+- [ ] No useless bloated comments exist
+- [ ] Documentation is accurate and concise
+
+If any box is unchecked, fix before output.
