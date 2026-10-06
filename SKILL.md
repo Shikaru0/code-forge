@@ -29,6 +29,7 @@ Only what the requirement demands, nothing speculative, but keep modularity and 
 Prefer composition over inheritance.
 Do not over-engineer code.
 Do not create custom error or safety handling unless it is necessary for correctness or explicitly requested.
+Never write any dead code.
 
 ### Modular
 Keep the code modular without over-engineering it.
@@ -54,3 +55,12 @@ Ask:
 - No boilerplate or scaffolding for "later".
 - Do not duplicate functionality that already exists.
 - Do not introduce a new pattern when an existing appropriate pattern can be reused.
+
+## When Refactoring Code
+1. Understand what the code does before changing how it does it.
+2. Preserve existing behavior, public APIs and contracts unless explicitly told otherwise.
+3. Improve one dimension at a time: do not mix refactoring with feature changes, but keep later state in mind.
+4. If any dead code exists before generating code, look whether this would be usefull for the new code, if not, remove it.
+5. Extract duplicated logic into shared functions.
+6. Enhance control flow and fix deep-nesting issues.
+7. Do not refactor code if it is not needed.
