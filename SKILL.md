@@ -37,3 +37,16 @@ Use abstractions if needed, but do not create them if there isn't a concrete pur
 Document code where the reasoning or behavior needs to be explained
 Only add comments for important non-obvious behavior, constraints, API's
 Keep documenation accurate, concise and brief
+
+## Simplicity
+Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away
+
+Ask:
+- Can anything be removed without losing required functionality?
+- Can anything be simplified without reducing correctness?
+- Is every abstraction, dependency, file and function justified?
+- Does this code need to exist at all?
+
+## Rules
+No unrequested or useless abstractions
+No boilerplate nor scaffolding for 'later'
