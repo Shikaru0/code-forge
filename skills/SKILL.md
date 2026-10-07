@@ -1,9 +1,9 @@
 ---
-name: code-forge
+name: skills
 description: "Mandatory coding skill. Invoke BEFORE: writing code, refactoring code, creating a new project, adding a dependency, reading or analyzing code. Produces minimal, documented, robust, modular code. Always active for any coding task."
 ---
 
-# code-forge
+# skills
 Apply these rules and principles when generating or refactoring code.
 
 ## Activation

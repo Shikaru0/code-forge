@@ -1,8 +1,8 @@
 {
   "skills": [
     {
-      "name": "code-forge",
-      "version": "1",
+      "name": "skills",
+      "version": "2",
       "files": ["SKILL.md"]
     }
   ]
