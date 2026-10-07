@@ -11,16 +11,18 @@ This skill is always active. Load these rules before any coding task.
 If you are about to write, refactor, analyze, or review code, apply these rules first.
 
 ## Overall Pipeline
-All sections always apply, but use the correct order based on your task and the Overall Pipeline Rules. 
+All sections are always active. Work in this order: analyze the code, check reuse, add the dependency or set up the project, apply architecture, generate, refactor — then the Checklist.
 
 ### Overall Pipeline Rules
 - Every section applies unless explicitly irrelevant to the task.
-- Apply sections in whatever order makes sense for the task.
-- Sections can be brought forth multiple times in an order.
-- Checklist is last, and always mandatory.
+- Apply sections in the order your task calls for; bring a section forth again as needed.
+- The Checklist is always last and always mandatory: every box checked before output.
 
 ## Adding a dependency
-When adding a dependency.
+Before adding a dependency, in order:
+1. Does the standard library do this?
+2. Does an existing dependency or a well-known package do this?
+3. If neither, add it.
 
 ### How To Add
 Add a dependency using the supported command if possible, only change direct file if needed. 
@@ -35,7 +37,7 @@ For instance:
 When creating a new project, following the Architecture section.
 
 ### Templates
-Use existing minimal templates/cli commands to setup the base project, rather then creating files manually.
+Use existing minimal templates/cli commands to setup the base project, rather than creating files manually.
 
 For instance:
 
@@ -65,7 +67,7 @@ Run through these in order, report findings, do not do unnecessary changes, outp
 #### Structure Issues
 - Functions doing things that it shouldn't do.
 - Deep nesting with bad returns.
-- Missing seperation of concerns.
+- Missing separation of concerns.
 - Circular or tangled dependencies.
 
 #### Documentation Gaps
@@ -104,13 +106,6 @@ When deciding file structure, module organization or project layout.
 - The abstraction saves fewer lines than it adds in indirection.
 - The abstraction exists to 'make things cleaner' without concrete benefit.
 
-## Coding Pipeline
-Before writing code, run through these in order:
-
-1. Does an existing dependency do or assist with this?
-2. Does a well-known package do this?
-3. If neither is appropriate, use the following principles.
-
 ## Code Generation
 Write minimal code using the following principles.
 
@@ -131,6 +126,17 @@ Document code where the reasoning or behavior needs to be explained.
 Only add comments for important non-obvious behavior, constraints, and APIs.
 Keep documentation accurate, concise, and brief.
 
+### Naming
+Prefer descriptive names over clever abbreviations.
+
+### Examples
+- Bad: `class RendererFactory { create() { return new Renderer() } }` — one implementation, indirection for nothing.
+  Good: call `render()` directly.
+- Bad: hand-rolled `formatDate()` when `Intl.DateTimeFormat` covers it.
+  Good: use the standard library.
+- Bad: a config class wrapped around one constant.
+  Good: `const RETRIES = 3`.
+
 ## Simplicity
 > Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.
 
@@ -140,17 +146,15 @@ Ask:
 - Is every abstraction, file, and function justified?
 - Does this code need to exist at all?
 
-## Rules
-- No unrequested or useless abstractions.
+Rules:
 - No boilerplate or scaffolding for "later".
-- Do not duplicate functionality that already exists.
 - Do not introduce a new pattern when an existing appropriate pattern can be reused.
 
 ## When Refactoring Code
 1. Understand what the code does before changing how it does it.
 2. Preserve existing behavior, public APIs and contracts unless explicitly told otherwise.
 3. Improve one dimension at a time: do not mix refactoring with feature changes, but keep later state in mind.
-4. If any dead code exists before generating code, look whether this would be usefull for the new code, if not, remove it.
+4. If any dead code exists before generating code, look whether this would be useful for the new code, if not, remove it.
 5. Extract duplicated logic into shared functions.
 6. Enhance control flow and fix deep-nesting issues.
 7. Do not refactor code if it is not needed.
@@ -160,19 +164,19 @@ Ask:
 - [ ] No existing dependency, package, or codebase function covers this
 - [ ] No duplicated logic introduced
 
-## Minimal
-- [ ] Nothing speculative: no unused parameters, branc hes or abstractions
+### Minimal
+- [ ] Nothing speculative: no unused parameters, branches or abstractions
 - [ ] Nothing can be removed without losing required functionality
 
-## Modular
+### Modular
 - [ ] Abstractions have a concrete purpose and use
 - [ ] Original duplicate logic is shared
 
-## Documented
+### Documented
 - [ ] No useless bloated comments exist
 - [ ] Documentation is accurate and concise
 
-## Simplicity
+### Simplicity
 - [ ] It follows the 'Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.' rule.
 
 If any box is unchecked, fix before output.
