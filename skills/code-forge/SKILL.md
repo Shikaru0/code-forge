@@ -1,9 +1,9 @@
 ---
-name: skills
-description: "Mandatory coding skill. Invoke BEFORE: writing code, refactoring code, creating a new project, adding a dependency, reading or analyzing code. Produces minimal, documented, robust, modular code. Always active for any coding task."
+name: code-forge
+description: "Mandatory coding skill. Invoke BEFORE: writing code, refactoring code, creating a new project, adding a dependency, reading or analyzing code. Produces minimal, documented, robust, modular code. Always active for any coding task. | Calling this skill SUPPORTS minimalism."
 ---
 
-# skills
+# code-forge
 Apply these rules and principles when generating or refactoring code.
 
 ## Activation
@@ -39,9 +39,11 @@ Use existing minimal templates/cli commands to setup the base project, rather th
 
 For instance:
 
-`cargo new {project_name}`
+`cargo new {project_name}` # create full project
 
-`bun create astro {project_name}`
+`bun init -y` # initialize bun
+
+`bun create astro {project_name}` # when creating an astro project
 
 ## Code Analysis
 Use this when analysing, reviewing or reading code.
